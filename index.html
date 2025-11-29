@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Redistribution Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Money Redistribution Calculator</h1>
+            <p class="subtitle">Discover how many people could be fed, vaccinated, and how many schools could be built instead of billionaire luxury spending</p>
+        </header>
+        
+        <div class="content">
+            <section class="calculator-section">
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="amount">Amount (in US dollars)</label>
+                        <input type="number" id="amount" placeholder="Enter amount" min="0" step="1000000" value="100000000">
+                    </div>
+                    
+                    <div class="input-field">
+                        <label for="category">Spending category (optional)</label>
+                        <select id="category">
+                            <option value="">Select category</option>
+                            <option value="yacht">Yacht</option>
+                            <option value="space" selected>Space flight</option>
+                            <option value="art">Art collection</option>
+                            <option value="jet">Private jet</option>
+                            <option value="mansion">Mansion</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="preset-buttons">
+                    <button type="button" class="preset-btn" data-amount="500000000">Yacht (500 million $)</button>
+                    <button type="button" class="preset-btn" data-amount="100000000">Space flight (100 million $)</button>
+                    <button type="button" class="preset-btn" data-amount="45000000">Private jet (45 million $)</button>
+                    <button type="button" class="preset-btn" data-amount="250000000">Mansion (250 million $)</button>
+                    <button type="button" class="preset-btn" data-amount="450000000000">Elon Musk's wealth (450 billion $)</button>
+                </div>
+            </section>
+            
+            <section class="results-section">
+                <div class="result-card">
+                    <h3 class="result-title">🍽️ People could be fed</h3>
+                    <div class="result-value" id="people-fed">0</div>
+                    <p class="result-description">Based on the cost of healthy nutrition $3.54 per person per day</p>
+                </div>
+                
+                <div class="result-card">
+                    <h3 class="result-title">💉 People could be vaccinated</h3>
+                    <div class="result-value" id="people-vaccinated">0</div>
+                    <p class="result-description">Based on the average vaccine cost of $31 per person</p>
+                </div>
+                
+                <div class="result-card">
+                    <h3 class="result-title">🏫 Schools could be built</h3>
+                    <div class="result-value" id="schools-built">0</div>
+                    <p class="result-description">Average cost to build a school: $300,000</p>
+                </div>
+                
+                <div class="result-card">
+                    <h3 class="result-title">🏥 Hospitals could be built</h3>
+                    <div class="result-value" id="hospitals-built">0</div>
+                    <p class="result-description">Average cost to build a hospital: $2,000,000</p>
+                </div>
+                
+                <div class="result-card"> 
+                    <h3 class="result-title">💧 Wells could be built</h3>
+                    <div class="result-value" id="wells-built">0</div>
+                    <p class="result-description">Average cost to build a well: $5,000</p>
+                </div>
+            </section>
+            
+            <section class="visualization">
+                <h3 class="visual-title">Visualization: How many people could be fed</h3>
+                <div class="icons-container" id="food-icons">
+                    <!-- Icons will be added dynamically -->
+                </div>
+            </section>
+            
+            <section class="billionaires-info">
+                <h3 class="billionaires-title">Spending of the world's richest people</h3>
+                
+                <div class="billionaire">
+                    <div class="billionaire-name">Elon Musk - net worth: ~$450 billion</div>
+                    <div class="billionaire-details">Spending: SpaceX programs, collection of houses, private jets</div>
+                </div>
+                
+                <div class="billionaire">
+                    <div class="billionaire-name">Jeff Bezos - net worth: ~$250 billion</div>
+                    <div class="billionaire-details">Spending: yachts, space flights, mansions around the world</div>
+                </div>
+                
+                <div class="billionaire">
+                    <div class="billionaire-name">Bernard Arnault - net worth: ~$201 billion</div>
+                    <div class="billionaire-details">Spending: art collections, yachts, real estate</div>
+                </div>
+                
+                <div class="billionaire">
+                    <div class="billionaire-name">Bill Gates - net worth: ~$119 billion</div>
+                    <div class="billionaire-details">Spending: private jets, car collection, real estate</div>
+                </div>
+                
+                <div class="billionaire">
+                    <div class="billionaire-name">Mark Zuckerberg - net worth: ~$230 billion</div>
+                    <div class="billionaire-details">Spending: real estate, private security, islands</div>
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p>Money Redistribution Calculator &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
